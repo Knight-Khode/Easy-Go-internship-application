@@ -30,7 +30,6 @@ body{
 /*Navbar Styling*/
 #navbar{
     background-color: #fff;
-    position: relative;
 }
 
 #navbar-content{
@@ -49,6 +48,15 @@ body{
 
 .navbar-left-content-links{
     display: flex;
+}
+
+.navbar-left-content-links a{
+    color: black;
+    transition: all ease-in-out 0.5s;
+}
+
+.navbar-left-content-links a:hover{
+    color: #FFA500;
 }
 
 .navbar-left-content-links li{
@@ -77,8 +85,6 @@ body{
 
 #bottom-nav{
     padding: 0px 20px;
-    z-index: 1000;
-    position: absolute;
     width: 100%;
     background-color: #fff;
 }
@@ -91,6 +97,15 @@ body{
 
 #bottom-nav ul li{
     padding-bottom: 10px;
+}
+
+#bottom-nav ul li a{
+    color: black;
+    transition: all ease-in-out 0.5s;
+}
+
+#bottom-nav ul li a:hover{
+    color: #FFA500;
 }
 
 .account{
@@ -115,11 +130,18 @@ body{
 
 .close-icon{
     font-size: 25px;
-    color: blue;
+    color: #0453B5;
 }
 
 .close{
     display: none;
+}
+
+.fa-bars{
+    color: #fff;
+    background-color: #0453B5;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #showcase{
@@ -129,6 +151,7 @@ body{
     width: 100vw;
     background-size: cover;
     margin-bottom: 30px;
+    position: relative;
 }
 
 #showcase h2{
@@ -423,6 +446,10 @@ body{
     font-size: 14px;
 }
 
+#contact{
+    margin-bottom: 70px;
+}
+
 .contact-content-left{
     width: 50%;
 }
@@ -495,7 +522,159 @@ textarea{
     background-color:#ffa600b0;
 }
 
+footer{
+    padding: 70px 0px;
+}
+
+.cont-border{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 10px;
+}
+
+.trip-goers,
+.curators,
+.about,
+.news{
+    display: flex;
+    flex-direction: column;
+}
+
+.trip-goers h2,
+.curators h2,
+.about h2,
+.news h2{
+    padding-bottom: 30px;
+}
+
+.trip-goers a,
+.curators a,
+.about a{
+    margin-bottom: 10px;
+    color: rgb(151, 151, 151);
+    transition: all ease-in-out 0.5s;
+}
+
+.trip-goers a:hover,
+.curators a:hover,
+.about a:hover{
+    color: rgb(107, 107, 107);
+    font-weight: bolder;
+}
+
+.subscribe{
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 20px 10px;
+    width: 400px;
+}
+
+.sub-inp{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sub-inp input{
+    padding: 10px 5px;
+    outline:#FFA500;
+    border: none;
+    border: 1px solid rgb(107, 107, 107);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.btm-data{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 250px;
+}
+
+.btm-data i{
+    margin-right: 5px;
+    color: rgb(151, 151, 151);
+}
+
+.btm-data p{
+    color: rgb(151, 151, 151);
+}
+
+.sub{
+    background-color: #FFA500;
+    padding: 10px 10px;
+    color: #fff;
+}
+
+.sub-input{
+    width: 160px;
+}
+
+footer{
+    background-color: #936be80d;
+}
+
+.copyrights{
+    color: rgb(151, 151, 151);
+    font-size: 14px;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+
+.btm-footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.icons a{
+    margin-right: 10px;
+}
+
+.icons a i:hover{
+    color: #a3a3a5;
+}
+
+.icons a i{
+    font-size: 15px;
+    color: black;
+    transition: all ease-in-out 0.5s;
+}
+
 /*responsiveness*/
+@media screen and (max-width: 1330px) {
+    .subscribe{
+        width: 200px;
+    }
+
+    .btm-data{
+        width: 180px;
+    }
+
+    .sub-input{
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+    }
+}
+
 @media screen and (max-width: 860px) {
     .why-work-content{
         display: flex;
@@ -521,6 +700,29 @@ textarea{
 
     textarea{
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .btm-footer-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .copyrights{
+        padding-bottom: 20px;
+        text-align: center;
     }
 }
 
@@ -601,6 +803,14 @@ textarea{
     .team-content-right{
         display: flex;
         justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
