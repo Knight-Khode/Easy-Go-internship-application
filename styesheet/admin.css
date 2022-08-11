@@ -104,6 +104,11 @@ a{
     display: none;
 }
 
+.bld{
+    font-weight: bolder;
+    color: black;
+}
+
 .menu i{
     color:#fff;
     background-color: black;
@@ -120,6 +125,8 @@ a{
     align-items: center;
     justify-content: space-between;
 }
+
+
 
 .hide{
     display: none;
