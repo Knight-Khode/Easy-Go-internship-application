@@ -651,6 +651,11 @@ footer{
     transition: all ease-in-out 0.5s;
 }
 
+.bold{
+    color: black;
+    font-weight: bolder;
+}
+
 /*responsiveness*/
 @media screen and (max-width: 1330px) {
     .subscribe{
